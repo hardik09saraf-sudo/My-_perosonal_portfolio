@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'screen/homescreen.dart';
+import 'screen/aboutme.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
 
-      home: HomeScreen(),
+      home: AboutScreen(),
 
     );
 
