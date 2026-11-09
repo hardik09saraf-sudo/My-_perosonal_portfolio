@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'aboutme.dart';
+import 'skills_screen.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -11,6 +13,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("My Portfolio"),
         backgroundColor: Color(0xFF100E2F),
+        foregroundColor: Colors.white,
       ),
 
       body: Container(
@@ -25,11 +28,12 @@ class HomeScreen extends StatelessWidget {
               Color(0xFF211650),
               Color(0xFF39216B),
             ],
-            
           ),
         ),
 
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
 
             CircleAvatar(
@@ -90,14 +94,28 @@ class HomeScreen extends StatelessWidget {
               children: [
 
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AboutScreen(),
+                      ),
+                    );
+                  },
                   child: Text("About Me"),
                 ),
 
                 SizedBox(width: 15),
 
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SkillsScreen(),
+                      ),
+                    );
+                  },
                   child: Text("My Skills"),
                 ),
 

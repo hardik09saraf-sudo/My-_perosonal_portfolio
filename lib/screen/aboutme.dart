@@ -1,6 +1,8 @@
 
-
 import 'package:flutter/material.dart';
+import 'skills_screen.dart';
+import 'projects_screen.dart';
+import 'contact_screen.dart';
 
 class AboutScreen extends StatelessWidget {
 
@@ -9,38 +11,26 @@ class AboutScreen extends StatelessWidget {
 
     return Scaffold(
 
-      // AppBar
-
       appBar: AppBar(
         title: Text("About Me"),
         backgroundColor: Color(0xFF100E2F),
+        foregroundColor: Colors.white,
       ),
-
-      // Background Container
 
       body: Container(
 
         width: double.infinity,
         height: double.infinity,
 
-        // Gradient Background
-
         decoration: BoxDecoration(
           gradient: LinearGradient(
-
             colors: [
               Color(0xFF100E2F),
               Color(0xFF211650),
               Color(0xFF39216B),
             ],
-
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-
           ),
         ),
-
-        // ListView for Scrolling
 
         child: ListView(
 
@@ -48,11 +38,8 @@ class AboutScreen extends StatelessWidget {
 
           children: [
 
-            // Main Heading
-
             Text(
               "About Me",
-
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 28,
@@ -62,11 +49,8 @@ class AboutScreen extends StatelessWidget {
 
             SizedBox(height: 20),
 
-            // Personal Background
-
             Text(
               "Personal Background",
-
               style: TextStyle(
                 color: Colors.purpleAccent,
                 fontSize: 20,
@@ -81,7 +65,6 @@ class AboutScreen extends StatelessWidget {
               "I am a Computer Science student "
               "who enjoys learning new technologies "
               "and developing creative applications.",
-
               style: TextStyle(
                 color: Colors.white70,
                 fontSize: 16,
@@ -90,11 +73,8 @@ class AboutScreen extends StatelessWidget {
 
             SizedBox(height: 25),
 
-            // Education
-
             Text(
               "Education",
-
               style: TextStyle(
                 color: Colors.purpleAccent,
                 fontSize: 20,
@@ -108,7 +88,6 @@ class AboutScreen extends StatelessWidget {
               "B.Tech in Computer Science and Engineering\n"
               "Lovely Professional University\n"
               "Currently Pursuing",
-
               style: TextStyle(
                 color: Colors.white70,
                 fontSize: 16,
@@ -117,11 +96,8 @@ class AboutScreen extends StatelessWidget {
 
             SizedBox(height: 25),
 
-            // Career Objective
-
             Text(
               "Career Objective",
-
               style: TextStyle(
                 color: Colors.purpleAccent,
                 fontSize: 20,
@@ -137,7 +113,6 @@ class AboutScreen extends StatelessWidget {
               "and websites. I want to improve my "
               "programming skills and gain practical "
               "industry experience.",
-
               style: TextStyle(
                 color: Colors.white70,
                 fontSize: 16,
@@ -146,11 +121,8 @@ class AboutScreen extends StatelessWidget {
 
             SizedBox(height: 25),
 
-            // Interests and Hobbies
-
             Text(
               "Interests & Hobbies",
-
               style: TextStyle(
                 color: Colors.purpleAccent,
                 fontSize: 20,
@@ -165,7 +137,6 @@ class AboutScreen extends StatelessWidget {
               "• Website Development\n"
               "• Coding\n"
               "• Learning New Technologies",
-
               style: TextStyle(
                 color: Colors.white70,
                 fontSize: 16,
@@ -174,14 +145,55 @@ class AboutScreen extends StatelessWidget {
 
             SizedBox(height: 30),
 
+            // Skills Button
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SkillsScreen(),
+                  ),
+                );
+              },
+              child: Text("My Skills"),
+            ),
+
+            SizedBox(height: 15),
+
+            // Projects Button
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProjectsScreen(),
+                  ),
+                );
+              },
+              child: Text("My Projects"),
+            ),
+
+            SizedBox(height: 15),
+
+            // Contact Button
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ContactScreen(),
+                  ),
+                );
+              },
+              child: Text("Contact Me"),
+            ),
+
           ],
-
         ),
-
       ),
-
     );
-
   }
-
 }

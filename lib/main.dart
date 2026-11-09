@@ -1,23 +1,17 @@
 
-import 'package:flutter/material.dart';
 
-import 'screen/aboutme.dart';
+import 'package:flutter/material.dart';
+import 'screen/homescreen.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-
-      home: AboutScreen(),
-
+      home: HomeScreen(),
     );
-
   }
 }
-
